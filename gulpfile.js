@@ -2,6 +2,9 @@ const gulp = require("gulp"),
 watch = require("gulp-watch"),
 postcss = require("gulp-postcss"),
 imports = require("postcss-import"),
+vars = require("postcss-simple-vars"),
+mixins = require("postcss-mixins"),
+nesting = require("postcss-nesting"),
 prefix = require("autoprefixer"),
 browserSync = require("browser-sync");
 
@@ -12,7 +15,7 @@ gulp.task("default", function(){
 
 gulp.task("css", function(){
 	gulp.src("./app/assets/styles/styles.css")
-	.pipe(postcss([imports, prefix]))
+	.pipe(postcss([imports, nesting, prefix, vars, mixins]))
 	.on("error", function(errorStatus){
 		console.log("Error: " + errorStatus);
 		this.emit("end");
