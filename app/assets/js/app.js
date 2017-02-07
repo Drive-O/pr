@@ -1,9 +1,17 @@
+const hamburger = document.querySelector(".first-page__nav__hamburger");
+const menu = document.querySelector(".first-page__nav__menu");
+
+hamburger.addEventListener("click", function(){
+  hamburger.classList.toggle("active");
+  menu.classList.toggle("active");
+})
+
 const app = {
-  content: document.querySelector(".page-header__typewriter__content"),
+  content: document.querySelector(".first-page__hl__txt"),
   text: "Hi. I'm Philipp.",
   index: 0,
   chars: 0,
-  speed: 100,
+  speed: 120,
   init: function(){
     this.chars = this.text.length;
     return this.write();

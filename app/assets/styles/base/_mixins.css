@@ -13,3 +13,8 @@
 		@mixin-content;
 	}
 }
+@define-mixin veryLargeScreen{
+	@media(min-width: 1500px){
+		@mixin-content;
+	}
+}

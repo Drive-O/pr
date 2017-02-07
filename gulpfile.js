@@ -15,7 +15,7 @@ gulp.task("default", function(){
 
 gulp.task("css", function(){
 	gulp.src("./app/assets/styles/styles.css")
-	.pipe(postcss([imports, nesting, prefix, vars, mixins]))
+	.pipe(postcss([imports, mixins, nesting, prefix, vars]))
 	.on("error", function(errorStatus){
 		console.log("Error: " + errorStatus);
 		this.emit("end");

@@ -1,0 +1,125 @@
+.first-page{
+  background: $orangebg;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  &__nav{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    &__hamburger{
+      position: absolute;
+      left: 15px;
+      top: 20px;
+      transition: all 0.5s ease-in-out;
+      @mixin mediumScreen{
+        display: none;
+      }
+    }
+    &__hamburger .line{
+      width: 60px;
+      height: 5px;
+      background: #fff;
+      display: block;
+      margin: 7px;
+      transition: all 0.5s ease-in-out;
+    }
+    &__hamburger.active .line:nth-child(1){
+      transform: translateY(-20px);
+    }
+    &__hamburger.active .line:nth-child(2){
+      transform: translate(30px, -4px) rotate(90deg);
+    }
+    &__hamburger.active .line:nth-child(3){
+      transform: translate(-30px, -16px) rotate(90deg);
+    }
+    &__hamburger.active{
+      transform: rotate(90deg);
+    }
+
+    &__hamburger:hover{
+      cursor: pointer;
+    }
+    &__menu{
+      display: none;
+      width: 100vw;
+      height: 0;
+      background: $yellow;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      &__ul{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      &__ul li{
+        list-style: none;
+        font-size: 1.5rem;
+        margin-top: 1.2rem;
+      }
+      &__ul li:nth-child(1){
+        margin: 0;
+      }
+      &__ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+        transition: all 0.3s ease-in-out;
+      }
+      &__ul li a:hover{
+        color: $dark;
+        text-decoration: underline;
+      }
+    }
+    &__menu.active{
+      display: inline-block;
+      height: 100vh;
+    }
+  }
+  &__hl{
+    width: 100%;
+    &__txt{
+      width: 100%;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 5rem;
+      color: #fff;
+      text-align: center;
+      @mixin mediumScreen{
+        top:15%;
+      }
+      @mixin largeScreen{
+        top: 10%;
+      }
+    }
+  }
+  &__bg{
+    background: url('../../assets/img/me.png') no-repeat;
+    background-position: 50%;
+    background-position-y: 70px;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    @mixin mediumScreen{
+      background-position-y: 100%;
+      background-size: 100%;
+    }
+    @mixin largeScreen{
+      background-size: 90%;
+      background-position-y: 100%;
+    }
+    @mixin veryLargeScreen{
+      background-size: 75%;
+      background-position-y: 30%;
+    }
+  }
+}
