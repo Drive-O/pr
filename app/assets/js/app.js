@@ -11,7 +11,7 @@ const app = {
   text: "Hi. I'm Philipp.",
   index: 0,
   chars: 0,
-  speed: 120,
+  speed: 100,
   init: function(){
     this.chars = this.text.length;
     return this.write();

@@ -2,4 +2,50 @@
   background: $turquoise;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  &__container{
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    &__about{
+      font-size: 4rem;
+      color: #fff;
+      border-bottom: 4px solid white;
+      text-transform: uppercase;
+    }
+    &__about:before{
+      background: url(../../assets/img/aboutme.png) no-repeat;
+      background-position: center;
+      background-size: 100%;
+      content: "";
+      padding: 0px 25px;
+      margin-right: 0.8rem;
+      filter: invert(100%);
+    }
+    &__about-me{
+      color: #fff;
+      margin-top: 0.9rem;
+      letter-spacing: 0.08rem;
+      line-height: 1.2rem;
+    }
+    &__about-me span{
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: $yellow;
+    }
+    &__arrow{
+      width: 0;
+      height: 0;
+      border-top: 30px solid white;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 4rem;
+    }
+  }
 }
