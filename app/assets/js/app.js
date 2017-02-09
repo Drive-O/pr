@@ -1,9 +1,17 @@
 const hamburger = document.querySelector(".first-page__nav__hamburger");
 const menu = document.querySelector(".first-page__nav__menu");
+const about = document.querySelector(".second-page");
 
 hamburger.addEventListener("click", function(){
   hamburger.classList.toggle("active");
   menu.classList.toggle("active");
+})
+window.addEventListener("scroll", function(){
+  console.log(about.offsetTop);
+  console.log("window:" + window.pageYOffset);
+  if(window.pageYOffset >= about.offsetTop){
+    console.log("Yes");
+  }
 })
 
 const app = {
