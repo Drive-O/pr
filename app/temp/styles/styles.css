@@ -1297,11 +1297,20 @@ html, body{
   border-radius: 100%;
   padding: 0.1rem;
   margin-top: 1.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media(min-width: 780px) {
 
   .fifth-page__container__follow__icon {}
+}
+
+.fifth-page__container__follow__icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: hue-rotate(90deg);
+          filter: hue-rotate(90deg);
 }
 
 .fifth-page__container__follow__icon:nth-child(2) {

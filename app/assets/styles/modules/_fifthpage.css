@@ -23,7 +23,7 @@
     &__follow{
       display: flex;
       flex-flow: column nowrap;
-      
+
       &__icon:nth-child(1){
         margin-top: 1.2rem;
       }
@@ -38,9 +38,14 @@
         border-radius: 100%;
         padding: 0.1rem;
         margin-top: 1.5rem;
+        transition: all 0.3s ease-in-out;
         @mixin mediumScreen{
 
         }
+      }
+      &__icon:hover{
+        transform: scale(1.1);
+        filter: hue-rotate(90deg);
       }
       &__icon:nth-child(2){
         background: url("../../assets/img/linked.png") no-repeat;
