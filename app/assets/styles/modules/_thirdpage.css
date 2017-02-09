@@ -10,19 +10,34 @@
     width: 50%;
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
+    @mixin mediumScreen{
+      align-items: flex-start;
+    }
     &__edu{
       color: white;
-      font-size: 4rem;
+      font-size: 2rem;
       border-bottom: 4px solid white;
       text-transform: uppercase;
+      text-align: center;
+      @mixin mediumScreen{
+        font-size: 4rem;
+        margin-top: 0;
+      }
     }
     &__edu:before{
       content: "";
       background: url(../../assets/img/book.png) no-repeat;
       background-position: center;
-      margin-right: 1.2rem;
-      padding: 0px 35px;
+      background-size: 70%;
+      margin-right: 0.5rem;
+      padding: 0px 29px;
       filter: invert(100%);
+      @mixin mediumScreen{
+        margin-right: 1.2rem;
+        padding: 0px 35px;
+        background-size: 100%;
+      }
     }
     &__list{
       margin-top: 1.2rem;
@@ -40,6 +55,15 @@
         margin-top: 0.3rem;
         display: block;
         font-size: 0.9rem;
+      }
+      &__describtion .small-fix{
+        display: none;
+        font-weight: 400;
+        color: white;
+        font-size: 1rem;
+        @mixin mediumScreen{
+          display: block;
+        }
       }
       &__describtion span{
         font-weight: 700;

@@ -1,0 +1,61 @@
+.fifth-page{
+  width: 100vw;
+  height: 100vh;
+  background: $redbg;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  &__container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    &__hl{
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      border-bottom: 4px solid white;
+      @mixin mediumScreen{
+        font-size: 4rem;
+      }
+    }
+    &__follow{
+      display: flex;
+      flex-flow: column nowrap;
+      
+      &__icon:nth-child(1){
+        margin-top: 1.2rem;
+      }
+      &__icon{
+        background: url("../../assets/img/git.png") no-repeat;
+        background-size: 100%;
+        background-position: center;
+        width: 64px;
+        height: 64px;
+        filter: invert(100%);
+        border: 3px solid black;
+        border-radius: 100%;
+        padding: 0.1rem;
+        margin-top: 1.5rem;
+        @mixin mediumScreen{
+
+        }
+      }
+      &__icon:nth-child(2){
+        background: url("../../assets/img/linked.png") no-repeat;
+        background-position: center;
+        background-size: 50%;
+      }
+      &__icon:nth-child(3){
+        background: url("../../assets/img/fb.png") no-repeat;
+        background-position: center;
+      }
+      &__icon:nth-child(4){
+        background: url("../../assets/img/mail.png") no-repeat;
+        background-position: center;
+        background-size: 70%;
+      }
+    }
+  }
+}

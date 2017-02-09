@@ -1,29 +1,45 @@
 .fourth-page{
   width: 100vw;
-  height: 100vh;
+  height: auto;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
   background: $dark;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  @mixin mediumScreen{
+    height: 100vh;
+  }
   &__container{
     width: 50%;
     display: flex;
     flex-flow: column nowrap;
     color: white;
+    align-items: center;
+    @mixin mediumScreen{
+      align-items: unset;
+    }
     &__skills{
-      font-size: 4rem;
+      font-size: 2rem;
       border-bottom: 3px solid white;
       text-transform: uppercase;
+      @mixin mediumScreen{
+        font-size: 4rem;
+      }
     }
     &__skills:before{
       content: "";
       background: url(../../assets/img/comp.png) no-repeat;
       filter: invert(100%);
       background-position: center;
-      background-size: 70px;
+      background-size: 40px;
       padding: 0px 28px;
       margin-right: 1.2rem;
+      @mixin mediumScreen{
+        background-size: 70px;
+        padding: 0px 28px;
+      }
     }
     &__list{
       display: flex;
@@ -143,19 +159,25 @@
       }
     }
     &__other-skills{
-      font-size: 2rem;
+      font-size: 1.4rem;
       border-bottom: 2px dotted white;
       margin-top: 1.8rem;
       text-transform: uppercase;
+      @mixin mediumScreen{
+        font-size: 2rem;
+      }
     }
     &__other-skills:before{
       content: "";
       background: url(../../assets/img/comp.png) no-repeat;
       filter: invert(100%);
       background-position: center;
-      background-size: 40px;
+      background-size: 30px;
       padding: 0px 28px;
       margin-right: 0.2rem;
+      @mixin mediumScreen{
+        background-size: 40px;
+      }
     }
   }
 }

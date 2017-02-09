@@ -11,25 +11,51 @@
     display: flex;
     flex-flow: column nowrap;
     &__about{
-      font-size: 4rem;
+      font-size: 2rem;
       color: #fff;
+      margin-top: 2rem;
+      padding-bottom: 3px;
       border-bottom: 4px solid white;
       text-transform: uppercase;
+      @mixin mediumScreen{
+        margin: 0;
+        padding-bottom: 0;
+        font-size: 4rem;
+
+      }
     }
     &__about:before{
       background: url(../../assets/img/aboutme.png) no-repeat;
       background-position: center;
-      background-size: 100%;
+      background-size: 90%;
       content: "";
-      padding: 0px 25px;
+      padding: 0px 20px;
       margin-right: 0.8rem;
       filter: invert(100%);
+      @mixin mediumScreen{
+        background-size: 100%;
+        padding: 0px 26px;
+      }
     }
     &__about-me{
       color: #fff;
       margin-top: 0.9rem;
       letter-spacing: 0.08rem;
       line-height: 1.2rem;
+      font-size: 0.8rem;
+
+      @mixin mediumScreen{
+        font-size: 1rem;
+      }
+    }
+    &__about-me .small-fix{
+      font-weight: 400;
+      font-size: 1rem;
+      color: white;
+      display: none;
+      @mixin mediumScreen{
+        display: block;
+      }
     }
     &__about-me span{
       font-weight: 700;
@@ -46,6 +72,10 @@
       left: 50%;
       transform: translateX(-50%);
       margin-top: 4rem;
+      display: none;
+      @mixin mediumScreen{
+        display: block;
+      }
     }
   }
 }
