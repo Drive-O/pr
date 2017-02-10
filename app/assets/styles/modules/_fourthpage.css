@@ -76,6 +76,8 @@
         background: white;
         display: block;
         border-radius: 10px;
+        padding-right: 2px;
+        margin-left: -1px;
       }
       &__skill-lvl .skill-bar .js{
         width: 90%;

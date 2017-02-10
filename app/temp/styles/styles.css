@@ -1097,6 +1097,8 @@ fieldset{
   background: white;
   display: block;
   border-radius: 10px;
+  padding-right: 2px;
+  margin-left: -1px;
 }
 
 .fourth-page__container__list__skill-lvl .skill-bar .js {
