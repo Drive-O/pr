@@ -469,6 +469,11 @@ html, body{
 	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
+
+}
+
+fieldset{
+	border: none;
 }
 
 .container{
@@ -1328,4 +1333,93 @@ html, body{
   background: url("../../assets/img/mail.png") no-repeat;
   background-position: center;
   background-size: 70%;
+}
+
+.contact-overlay{
+  width: 100vw;
+  height: 100vh;
+  right: 100vw;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
+  background: #1abc9c
+}
+
+.contact-overlay__container {
+  max-width: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-overlay__container__hl {
+  color: white;
+  font-size: 2rem;
+}
+
+.contact-overlay__container__back {
+  font-size: 2rem;
+  color: white;
+  display: block;
+  margin-top: 2rem;
+}
+
+.contact-overlay__container__form {
+  width: 100%;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.contact-overlay__container__form textarea {
+  max-width: 100%;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  overflow: none;
+  padding: 0.4rem;
+}
+
+.contact-overlay__container__form input {
+  max-width: 100%;
+  width: 100%;
+  padding: 0.4rem;
+}
+
+.contact-overlay__container__form button {
+  border: 0;
+  background: 0;
+  color: white;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  padding: 0.6rem;
+}
+
+.contact-overlay__container__form button:hover {
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
 }
