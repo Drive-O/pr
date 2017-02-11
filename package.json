@@ -26,6 +26,7 @@
     "postcss-import": "^9.1.0",
     "postcss-mixins": "^5.4.1",
     "postcss-nesting": "^2.3.1",
-    "postcss-simple-vars": "^3.0.0"
+    "postcss-simple-vars": "^3.0.0",
+    "zenscroll": "^3.3.0"
   }
 }
