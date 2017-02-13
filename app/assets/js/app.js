@@ -11,14 +11,14 @@ const aboutContainer = document.querySelector(".second-page");
 //Mail Button
 const mailbtn = document.querySelector(".mail");
 //Contact Overlay Page
-const overlay = document.querySelector(".contact-overlay");
+const overlay = document.querySelector(".fifth-page__overlay");
 let index = 0;
 //Contact Overlay Page right
 let overlayRight = window.getComputedStyle(overlay, null).getPropertyValue("left");
 
 
 //Back Button
-const back = document.querySelector(".contact-overlay__container__back");
+const back = document.querySelector(".fifth-page__overlay__container__back");
 //Temporary attempt////////////////////////////////////////////////////////////////////////////
 const spanText = "I am a German self-taught front end developer who is constantly eager to improve " +
 "his Javascript skills and to diver deeper into the magic universe of the web. " +
@@ -67,31 +67,10 @@ startTyper.write();
 const aboutTyper = new Typewriter(aboutTextContainer, spanText, 100);
 //Typer Instance for Second part about page
 const aboutTyper2 = new Typewriter(aboutTextContainer, spanText2, 100);
-//Listener Event for Mail button
-mailbtn.addEventListener("click", function(e){
-  if(e){
-    index = 100;
-    setInterval(function(){
-      overlay.style.right = overlayRight;
-      console.log(overlay.style.right);
-      if(parseInt(overlayRight) <= parseInt(window.innerWidth) && overlayRight !== "0vw"){
-        index--;
-        overlayRight = index + "vw";
-      }
-    }, 1)
-  }
-})
-//listener for back button
-back.addEventListener("click", function(e){
-  index = 0;
-  if(e){
-    setInterval(function(){
-      overlay.style.right = overlayRight;
-      if(parseInt(overlayRight) < 100){
-        index++;
-        overlayRight = index + "vw";
-      }
-      //console.log(overlayRight);
-    }, 1)
-  }
+
+$(mailbtn).click(function(){
+  $(overlay).slideDown("slow");
+});
+$(back).click(function(){
+  $(overlay).slideUp("slow");
 })

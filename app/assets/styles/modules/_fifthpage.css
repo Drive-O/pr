@@ -6,6 +6,7 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  z-index: 1;
   &__container{
     display: flex;
     flex-flow: column nowrap;

@@ -1245,7 +1245,8 @@ fieldset{
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center
+          justify-content: center;
+  z-index: 1
 }
 
 .fifth-page__container {
@@ -1310,7 +1311,8 @@ fieldset{
 
 @media(min-width: 780px) {
 
-  .fifth-page__container__follow__icon {}
+  .fifth-page__container__follow__icon {
+}
 }
 
 .fifth-page__container__follow__icon:hover {
@@ -1337,10 +1339,12 @@ fieldset{
   background-size: 70%;
 }
 
-.contact-overlay{
+.fifth-page{
+}
+
+.fifth-page__overlay {
   width: 100vw;
   height: 100vh;
-  right: 100vw;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1355,13 +1359,18 @@ fieldset{
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1000;
-  background: #1abc9c
+  z-index: 100;
+  background: #1abc9c;
+  display: none;
 }
 
-.contact-overlay__container {
+.fifth-page__overlay__container {
   max-width: 50%;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1374,25 +1383,25 @@ fieldset{
           align-items: center;
 }
 
-.contact-overlay__container__hl {
+.fifth-page__overlay__container__hl {
   color: white;
   font-size: 2rem;
 }
 
-.contact-overlay__container__back {
+.fifth-page__overlay__container__back {
   font-size: 2rem;
   color: white;
   display: block;
   margin-top: 2rem;
 }
 
-.contact-overlay__container__form {
+.fifth-page__overlay__container__form {
   width: 100%;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
-.contact-overlay__container__form textarea {
+.fifth-page__overlay__container__form textarea {
   max-width: 100%;
   width: 100%;
   height: 100px;
@@ -1401,13 +1410,13 @@ fieldset{
   padding: 0.4rem;
 }
 
-.contact-overlay__container__form input {
+.fifth-page__overlay__container__form input {
   max-width: 100%;
   width: 100%;
   padding: 0.4rem;
 }
 
-.contact-overlay__container__form button {
+.fifth-page__overlay__container__form button {
   border: 0;
   background: 0;
   color: white;
@@ -1420,7 +1429,7 @@ fieldset{
   padding: 0.6rem;
 }
 
-.contact-overlay__container__form button:hover {
+.fifth-page__overlay__container__form button:hover {
   border: 1px solid white;
   border-radius: 10px;
   cursor: pointer;
