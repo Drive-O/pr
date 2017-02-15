@@ -1442,3 +1442,72 @@ fieldset{
   background: rgba(1,1,1,0.5);
   color: white;
 }
+
+.sixth-page{
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #9b59b6
+}
+
+.sixth-page__container {
+  min-width: 50%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sixth-page__container__impressum span {
+  color: rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+
+@media(min-width: 780px) {
+
+  .sixth-page__container__impressum span {
+    font-size: 2rem;
+  }
+}
+
+.sixth-page__container__impressum ul {
+  margin-top: 0.5rem;
+}
+
+.sixth-page__container__impressum ul li {
+  list-style: none;
+  color: rgba(0,0,0,0.6);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+@media(min-width: 780px) {
+
+  .sixth-page__container__impressum ul li {
+    font-size: 1.4rem;
+  }
+}
