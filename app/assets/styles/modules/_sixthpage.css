@@ -1,6 +1,9 @@
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
 .sixth-page{
   width: 100vw;
-  height: 100vh;
+  height: auto;
+  padding: 3.4rem;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -10,7 +13,7 @@
     min-width: 50%;
     height: 50%;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     &__impressum span{
@@ -33,6 +36,53 @@
       @mixin mediumScreen{
         font-size: 1.4rem;
       }
+    }
+    &__social{
+      margin-left: 0;
+      margin-top: 1.2rem;
+      display: flex;
+      flex-flow: column nowrap;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      @mixin mediumScreen{
+        display: block;
+        width: auto;
+        margin-left: 4rem;
+      }
+    }
+    &__social span{
+      font-size: 1.5rem;
+      color: rgba(0,0,0,0.6);
+      text-align: center;
+    }
+    &__social ul{
+      margin-top: 2rem;
+      text-align: center;
+    }
+    &__social ul a{
+      display: inline-block;
+      padding: 12px;
+      border-radius: 100%;
+      margin-left: 0.5rem;
+      background: white;
+      -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.35);
+      -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.35);
+      box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.35);
+      transition: all 0.3s ease-in-out;
+    }
+    &__social .zocial-github, &__social .zocial-pinterest, &__social .zocial-skype, &__social .zocial-reddit{
+      font-family: 'zocial', sans-serif;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+      margin-top: 0.4rem;
+      width: 24px;
+      height: 24px;
+    }
+    &__social ul a:hover{
+      transform: scale(1.2);
+      cursor: pointer;
     }
   }
 }
