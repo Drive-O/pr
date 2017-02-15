@@ -8,7 +8,7 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  background: $purple;
+  background: $dark;
   &__container{
     min-width: 50%;
     height: 50%;
@@ -16,12 +16,11 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    &__impressum span{
-      color: rgba(0,0,0,0.4);
-      text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    &__impressum span, &__social span{
+      color: white;
       text-transform: uppercase;
       font-size: 1.2rem;
-      border-bottom: 1px solid rgba(0,0,0,0.4);
+      border-bottom: 1px solid white;
       @mixin mediumScreen{
         font-size: 2rem;
       }
@@ -30,9 +29,9 @@
       margin-top: 0.5rem;
     }
     &__impressum ul li{
+      text-align: center;
       list-style: none;
-      color: rgba(0,0,0,0.6);
-      text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+      color: white;
       @mixin mediumScreen{
         font-size: 1.4rem;
       }
@@ -46,31 +45,10 @@
       height: 100%;
       justify-content: center;
       align-items: center;
-      @mixin mediumScreen{
-        display: block;
-        width: auto;
-        margin-left: 4rem;
-      }
-    }
-    &__social span{
-      font-size: 1.5rem;
-      color: rgba(0,0,0,0.6);
-      text-align: center;
     }
     &__social ul{
-      margin-top: 2rem;
+      margin-top: 0.5rem;
       text-align: center;
-    }
-    &__social ul a{
-      display: inline-block;
-      padding: 12px;
-      border-radius: 100%;
-      margin-left: 0.5rem;
-      background: white;
-      -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.35);
-      -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.35);
-      box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.35);
-      transition: all 0.3s ease-in-out;
     }
     &__social .zocial-github, &__social .zocial-pinterest, &__social .zocial-skype, &__social .zocial-reddit{
       font-family: 'zocial', sans-serif;
@@ -79,6 +57,16 @@
       margin-top: 0.4rem;
       width: 24px;
       height: 24px;
+      color: white;
+      @mixin mediumScreen{
+        transform: scale(2);
+        margin-left: 1.2rem;
+        margin-top: 1.4rem;
+      }
+    }
+    &__social ul a{
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
     }
     &__social ul a:hover{
       transform: scale(1.2);

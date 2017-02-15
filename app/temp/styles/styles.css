@@ -976,7 +976,7 @@ menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #9b59b6
+  background: #1e1e1e
 }.sixth-page__container{
   min-width: 50%;
   height: 50%;
@@ -993,21 +993,20 @@ menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}.sixth-page__container__impressum span{
-  color: rgba(0,0,0,0.4);
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}.sixth-page__container__impressum span, .sixth-page__container__social span{
+  color: white;
   text-transform: uppercase;
   font-size: 1.2rem;
-  border-bottom: 1px solid rgba(0,0,0,0.4);
-}@media(min-width: 780px){.sixth-page__container__impressum span{
+  border-bottom: 1px solid white;
+}@media(min-width: 780px){.sixth-page__container__impressum span, .sixth-page__container__social span{
     font-size: 2rem;
   }
 }.sixth-page__container__impressum ul{
   margin-top: 0.5rem;
 }.sixth-page__container__impressum ul li{
+  text-align: center;
   list-style: none;
-  color: rgba(0,0,0,0.6);
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  color: white;
 }@media(min-width: 780px){.sixth-page__container__impressum ul li{
     font-size: 1.4rem;
   }
@@ -1029,27 +1028,9 @@ menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}@media(min-width: 780px){.sixth-page__container__social{
-    display: block;
-    width: auto;
-    margin-left: 4rem;
-  }
-}.sixth-page__container__social span{
-  font-size: 1.5rem;
-  color: rgba(0,0,0,0.6);
-  text-align: center;
 }.sixth-page__container__social ul{
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   text-align: center;
-}.sixth-page__container__social ul a{
-  display: inline-block;
-  padding: 12px;
-  border-radius: 100%;
-  margin-left: 0.5rem;
-  background: white;
-  box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.35);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }.sixth-page__container__social .zocial-github, .sixth-page__container__social .zocial-pinterest, .sixth-page__container__social .zocial-skype, .sixth-page__container__social .zocial-reddit{
   font-family: 'zocial', sans-serif;
   display: inline-block;
@@ -1058,6 +1039,17 @@ menu {
   margin-top: 0.4rem;
   width: 24px;
   height: 24px;
+  color: white;
+}@media(min-width: 780px){.sixth-page__container__social .zocial-github, .sixth-page__container__social .zocial-pinterest, .sixth-page__container__social .zocial-skype, .sixth-page__container__social .zocial-reddit{
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    margin-left: 1.2rem;
+    margin-top: 1.4rem;
+  }
+}.sixth-page__container__social ul a{
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }.sixth-page__container__social ul a:hover{
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
