@@ -75,11 +75,13 @@ $(back).click(function(){
   $(overlay).slideUp("slow");
 })
 
-//Smooth scrolling
-$(document).on('click', 'a', function(event){
-    event.preventDefault();
-
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
+//smooth scroll
+$('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
 });

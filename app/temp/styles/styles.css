@@ -1028,30 +1028,28 @@ menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}.sixth-page__container__social ul{
+}.sixth-page__container__social__links{
   margin-top: 0.5rem;
   text-align: center;
-}.sixth-page__container__social .zocial-github, .sixth-page__container__social .zocial-pinterest, .sixth-page__container__social .zocial-skype, .sixth-page__container__social .zocial-reddit{
-  font-family: 'zocial', sans-serif;
+}.sixth-page__container__social__links a{
   display: inline-block;
+  margin: 0;
+  padding: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  margin-top: 0.4rem;
+  font-family: 'zocial', sans-serif;
   width: 24px;
   height: 24px;
   color: white;
-}@media(min-width: 780px){.sixth-page__container__social .zocial-github, .sixth-page__container__social .zocial-pinterest, .sixth-page__container__social .zocial-skype, .sixth-page__container__social .zocial-reddit{
+  text-decoration: none;
+}@media(min-width: 780px){.sixth-page__container__social__links a{
     -webkit-transform: scale(2);
             transform: scale(2);
     margin-left: 1.2rem;
     margin-top: 1.4rem;
   }
-}.sixth-page__container__social ul a{
-  display: inline-block;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}.sixth-page__container__social ul a:hover{
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+}.sixth-page__container__social__links a:hover{
+  -webkit-transform: scale(2.3);
+          transform: scale(2.3);
   cursor: pointer;
 }
