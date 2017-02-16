@@ -1,5 +1,3 @@
-@import url(//weloveiconfonts.com/api/?family=zocial);
-
 .sixth-page{
   width: 100vw;
   height: auto;
@@ -30,45 +28,13 @@
     }
     &__impressum ul li{
       text-align: center;
+      margin-top: 0.2rem;
       list-style: none;
       color: white;
       @mixin mediumScreen{
-        font-size: 1.4rem;
+        font-size: 0.8rem;
       }
     }
-    &__social{
-      margin-left: 0;
-      margin-top: 1.2rem;
-      display: flex;
-      flex-flow: column nowrap;
-      width: 100%;
-      height: 100%;
-      justify-content: center;
-      align-items: center;
-      &__links{
-        margin-top: 0.5rem;
-        text-align: center;
-      }
-      &__links a{
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        transition: all 0.3s ease-in-out;
-        font-family: 'zocial', sans-serif;
-        width: 24px;
-        height: 24px;
-        color: white;
-        text-decoration: none;
-        @mixin mediumScreen{
-          transform: scale(2);
-          margin-left: 1.2rem;
-          margin-top: 1.4rem;
-        }
-      }
-      &__links a:hover{
-        transform: scale(2.3);
-        cursor: pointer;
-      }
-    }
+
   }
 }
